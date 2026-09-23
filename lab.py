@@ -6,13 +6,13 @@ import pandas as pd
 
 path = "weather.csv"
 first = not os.path.exists(path)
-
-now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-city = random.choice(["서울", "부산", "인천", "춘천"])
-temp = round(random.uniform(18, 30), 1)
-humidity = random.randint(40, 85)
-status = random.choice(["맑음", "흐림", "비, 강풍"])
-row = [now, city, temp, humidity, status]
+for i in range(10):
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    city = random.choice(["서울", "부산", "인천", "춘천"])
+    temp = round(random.uniform(18, 30), 1)
+    humidity = random.randint(40, 85)
+    status = random.choice(["맑음", "흐림", "비, 강풍"])
+    row = [now, city, temp, humidity, status]
 
 with open(path, "a", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)

@@ -1,0 +1,4 @@
+﻿record_id,column,confirmed_value,reason
+R019,quantity,90,"원본 주문 수량 90, sales는 quantity×unit_price로 재계산한다."
+R026,quantity,100,"원본 주문 수량 100, 추가 0 두 개가 입력되었다."
+R034,quantity,300,행사일 원본 수량 300으로 확인하여 유지한다.

@@ -8,5 +8,3 @@ plt.title("Sales by store")
 plt.tight_layout()
 plt.show()
 
-print(int(0.5 * 10**7))
-print(40000000 / 10000)

@@ -52,13 +52,13 @@ for table, key_cols in [
 ]:
      print(table[key_cols].isna().any().any())
      print(table[key_cols].duplicated(key_cols).sum())
-items.merge(
+analysis = items.merge(
     products,
     on="product_id",
     how="left",
     validate="many_to_one"
 )
-
+print(analysis)
 g = analysis.groupby("store")["sales"]
 totals = g.sum()
 print(totals)
